@@ -1,17 +1,28 @@
-set nocompatible
-filetype off
+set nocompatible              " be iMproved, required
+filetype off                  " required
 
+" Set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
+" Let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'nanotech/jellybeans.vim'
-Plugin 'nathanaelkane/vim-indent-guides'
 
-call vundle#end()
-filetype plugin indent on
+" --- Plugins ---
+Plugin 'nanotech/vim-jellybeans' " Colorscheme
+Plugin 'tpope/vim-fugitive'      " Git wrapper
+
+call vundle#end()            " required
+filetype plugin indent on    " required
+
+" --- General Settings ---
 syntax on
-
-let g:indent_guides_enable_on_vim_startup = 1
-
+set number
 colorscheme jellybeans
+
+" At the very bottom of your .vimrc
+try
+  colorscheme jellybeans
+catch
+  " If jellybeans isn't installed yet, ignore the error
+endtry
