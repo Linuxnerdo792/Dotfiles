@@ -22,6 +22,85 @@ alias gp="git push"
 alias df="df -h"
 alias free="free -h"
 
+
+
+
+# 🧰 Git commands
+
+alias gs="git status"
+alias gst="git status -sb"
+alias gl="git log"
+alias ga="git add"
+alias gaa="git add -A"
+alias gal="git add ."
+alias gall="git add ."
+alias gca="git commit -a"
+alias gc="git commit -m"
+alias gcot="git checkout"
+alias gchekout="git checkout"
+alias gco="git checkout"
+alias gcb="git checkout -b"
+alias gb="git branch"
+alias gpo="git push origin"
+alias gpl="git pull origin"
+alias gd="git diff"
+alias gclean="git reset --hard && git clean -df"
+alias gundo="git reset --soft HEAD~1"
+alias gchckout="git checkout"
+alias gckout="git checkout"
+alias go="git push -u origin"
+alias gsh='git stash'
+alias gw='git whatchanged'
+alias gitlg="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+alias nah="git clean -df && git checkout -- ."alias ...="cd ../.."
+
+#Changing path
+alias ....="cd ../../.."
+
+alias .....="cd ../../../.."
+
+alias ......="cd ../../../../.."
+
+alias .1="cd .."
+
+alias .2="cd ../.."
+
+alias .3="cd ../../.."
+
+alias .4="cd ../../../.."
+
+alias .5="cd ../../../../.."
+
+alias ..1="cd .."
+
+alias ..2="cd ../.."
+
+alias ..3="cd ../../.."
+
+alias ..4="cd ../../../.."
+
+alias ..5="cd ../../../../.."
+
+alias cd..="cd .."
+
+alias cd...="cd ../.."
+
+alias cd....="cd ../../.."
+
+alias cd.....="cd ../../../.."
+
+alias cd......="cd ../../../../.."
+
+alias cd1="cd .."
+
+alias cd2="cd ../.."
+
+alias cd3="cd ../../.."
+
+alias cd4="cd ../../../.."
+
+alias cd5="cd ../../../../.."
+
 # Cool function: extract any archive easily
 extract () {
     if [ -f "$1" ]; then
@@ -40,3 +119,30 @@ extract () {
         echo "'$1' is not a valid file"
     fi
 }
+
+
+# 🐳 Useful Docker functions
+
+alias dl="sudo docker ps -l -q"
+
+alias dps="sudo docker ps"
+
+alias di="sudo docker images"
+
+alias dip="sudo docker inspect --format '{{ .NetworkSettings.IPAddress }}'"
+
+alias dkd="sudo docker run -d -P"
+
+alias dki="sudo docker run -i -t -P"
+
+alias dex="sudo docker exec -i -t"
+
+alias dstop="docker stop $(docker ps -q)" # stop all
+
+alias drm="docker rm $(docker ps -a -q)" # remove all containers
+
+alias dclean="docker system prune -af" # clean system
+
+alias dlog="docker logs -f" # follow logs
+
+
