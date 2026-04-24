@@ -42,6 +42,7 @@ research@Research:~/Dotfiles$ tree -L 2
 
 # Link to my vim-config folder:
 [Vim-config](https://github.com/Linuxnerdo792/Dotfiles/tree/main/vim-config)
+
 ---
 
 ### Homefiles 
@@ -76,7 +77,9 @@ This folder contains my Bash customizations.
 
 # Link to my sys-installs folder:
 
+
 [sys-installs](https://github.com/Linuxnerdo792/Dotfiles/tree/main/sys-installs)
+
 
 ---
 
