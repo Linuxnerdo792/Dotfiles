@@ -1,50 +1,97 @@
+
 # Homefiles
-# Bash Customizations
-# Research Sharma Bhattarai
+
+## Bash Customizations
+
+### Research Sharma Bhattarai
+
+- This folder contains my customized Bash setup that I use to make working in the terminal faster and more efficient. The main idea here is to simplify repetitive tasks, improve navigation, and make system management easier. I organized everything so it can be reused easily through my dotfiles setup using symbolic links.
 
 
-- This folder contains my customized Bash environment setup to improve command-line efficiency, workflow, and system management. It includes a collection of aliases, functions, and a setup script that can be installed and maintained through symbolic linking in a dotfiles repository.
-
----
 
 ## Files
 
-- **`.bash_aliases`**  
-  - It Contains custom aliases and functions, including:
+### `.bash_aliases`
 
-  ### Navigation Shortcuts
-  - `..`, `...`, `.1`–`.5`, `....`–`......` – It is the quick traversal of directories  
-  - `cd..`, `cd...` – This is the alternate navigation shortcuts  
+This file contains all my custom aliases and functions.
 
-  ### Safer File Operations
-  - `rm -i`, `cp -i`, `mv -i` – These are the interactive commands to prevent accidental deletion or overwriting  
+#### Navigation Shortcuts
 
-  ### Git Workflow Aliases
-  - `gs`, `gst`, `ga`, `gaa`, `gc`, `gca`, `gp`, `gpl`, `gpo`, `gd` – This will be very helpful speed up common Git operations and save my time to do some assignment or projects.  
-  - `gitlg` – It kind of works as a visual commit graph for easy history tracking  
-  - I used other aliash as well ad in future i will add.
-  ### Docker Aliases
-  - `dps`, `di`, `dl`, `dkd`, `dki`, `dex`, `dstop`, `drm`, `dclean`, `dlog` – simplify Docker container and image management  
+* `..`, `...`, `.1`–`.5`, `....`–`......` : It is  used for quickly moving across directories
+* `cd..`, `cd...` |: It is used for alternative shortcuts for navigation
 
-  ### Utility Functions
-  - `extract` – extracts multiple archive types (`.zip`, `.tar.gz`, `.tar.bz2`, `.rar`, `.7z`, `.gz`, `.tar`, `.bz2`) with one command  
+- These help me move around the system faster without typing long paths.
 
 ---
 
-- **`setup.sh`**  
-  - This Automates installation of the Bash customizations:
-  - This also backs up any existing `.bash_aliases` file  
-  - Then it creates a symbolic link from the dotfiles repository to the user’s home directory  
-  - It ensures `.bashrc` sources `.bash_aliases`  
-  - It prompts the user to reload the Bash environment
+#### Safer File Operations
 
+* `rm -i`, `cp -i`, `mv -i`
 
-### CITATIONS
-- [Awesome Bash Aliases](https://github.com/ctrlaltvikas/awesome-bash-alias) – I used many aliases from here and modified my `.bash_aliases` file.
+- I made these interactive so I don’t accidentally delete or overwrite important files. It adds a confirmation step which is really useful.
 
-- [Cyberciti Bash Aliases Guide](https://www.cyberciti.biz/tips/bash-aliases-mac-centos-linux-unix.html)– I also used some of the alias and understood how it work and learned new command from here.
+---
+
+#### Git Workflow Aliases
+
+* `gs`, `gst`, `ga`, `gaa`, `gc`, `gca`, `gp`, `gpl`, `gpo`, `gd`
+
+- These shorten common Git commands and save time when working on assignments or projects.
+
+* `gitlg` : This shows me a cleaner commit history
+ 
+- I also added some extra aliases and I plan to keep improving this section as I use Git more.
+
+---
+
+#### Docker Aliases
+
+* `dps`, `di`, `dl`, `dkd`, `dki`, `dex`, `dstop`, `drm`, `dclean`, `dlog`
+
+- These make it easier to manage Docker containers and images without typing full commands every time.
+
+---
+
+#### Utility Function
+
+* `extract`
+
+- This function allows me to extract different types of compressed files (`.zip`, `.tar.gz`, `.rar`, etc.) using a single command, instead of remembering different commands for each format.
+
+---
+
+### `setup.sh`
+
+This script automates the setup of my Bash environment.
+
+What it does:
+
+* First it backs up any existing `.bash_aliases` file
+* Then it creates a symbolic link from this repo to my home directory
+* After that it makes sure `.bashrc` loads `.bash_aliases`
+* Lastly it prompts the user to reload the environment
+
+- This makes the setup process much cleaner and reusable on any system.
+
+---
+
+## Citations
+
+* [Awesome Bash Aliases](https://github.com/ctrlaltvikas/awesome-bash-alias)
+  I used this as a base reference and modified many aliases to fit my workflow.
+
+* [Cyberciti Bash Aliases Guide](https://www.cyberciti.biz/tips/bash-aliases-mac-centos-linux-unix.html)
+  This helped me understand how aliases actually work and gave ideas for additional commands.
+
+---
 
 ## AI Usage
 
-- I used ChatGPT to help create the setup script for linking and backing up my Bash files and the prompt was "Create a Bash setup script that backs up existing dotfiles, creates symbolic links to my repository, and ensures .bashrc sources .bash_aliases."
+I used ChatGPT to help with the initial version of the setup script. The prompt I used was:
+
+ "Create a Bash setup script that backs up existing dotfiles, creates symbolic links to my repository, and ensures .bashrc sources .bash_aliases."
+
+- After that, I reviewed and adjusted the script myself to match my setup and understanding and i also make sure i understood what was going on.
+
+---
 
