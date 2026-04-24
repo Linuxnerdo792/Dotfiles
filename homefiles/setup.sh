@@ -17,6 +17,8 @@ REQUIRED_PACKAGES=(git unzip p7zip-full docker.io)
 # -----------------------
 # 1. Check for sudo and install packages
 # -----------------------
+MISSING_PACKAGES=()
+
 if [ "$(id -u)" -eq 0 ]; then
     echo "Running as root..."
 else
@@ -29,14 +31,19 @@ else
     done
 
     if [ ${#MISSING_PACKAGES[@]} -gt 0 ]; then
-        echo "Installing missing packages..."
-        sudo apt update
-        sudo apt install -y "${MISSING_PACKAGES[@]}"
+        read -p "Missing packages found. Do you want to install them now? (y/n): " install_choice
+
+        if [[ "$install_choice" == "y" || "$install_choice" == "Y" ]]; then
+            echo "Installing missing packages..."
+            sudo apt update
+            sudo apt install -y "${MISSING_PACKAGES[@]}"
+        else
+            echo "Skipping package installation."
+        fi
     else
         echo "All required packages are already installed."
     fi
 fi
-
 # -----------------------
 # 2. Backup existing file
 # -----------------------
@@ -69,5 +76,14 @@ fi
 # -----------------------
 # 5. Finish
 # -----------------------
+
 echo "Setup complete!"
-echo "Please reload your shell: run 'source ~/.bashrc' or restart your terminal."
+
+read -p "Do you want to reload your Bash environment now? (y/n): " reload_choice
+
+if [[ "$reload_choice" == "y" || "$reload_choice" == "Y" ]]; then
+    source "$HOME/.bashrc"
+    echo "Bash environment reloaded."
+else
+    echo "You can reload later by running: source ~/.bashrc"
+fi
