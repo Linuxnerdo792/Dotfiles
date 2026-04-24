@@ -11,8 +11,8 @@
 # Configuration
 # -----------------------
 DOTFILES_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-BASH_FILE=".bash_aliases"   # change to .bashrc if you want to link .bashrc instead
-REQUIRED_PACKAGES=(git unzip p7zip-full docker.io) # optional
+BASH_FILE=".bash_aliases"   
+REQUIRED_PACKAGES=(git unzip p7zip-full docker.io) 
 
 # -----------------------
 # 1. Check for sudo and install packages
