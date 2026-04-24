@@ -43,7 +43,7 @@
 
 - [Cyberciti Bash Aliases Guide](https://www.cyberciti.biz/tips/bash-aliases-mac-centos-linux-unix.html)– I also used some of the alias and understood how it work and learned new command from here.
 
-## 🤖 AI Usage
+## AI Usage
 
 - I used ChatGPT to help create the setup script for linking and backing up my Bash files and the prompt was "Create a Bash setup script that backs up existing dotfiles, creates symbolic links to my repository, and ensures .bashrc sources .bash_aliases."
 
