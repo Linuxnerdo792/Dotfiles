@@ -62,17 +62,14 @@ This file contains all my custom aliases and functions.
 
 ### `setup.sh`
 
-This script automates the setup of my Bash environment.
+- This script automates the setup of my Bash environment.
 
 What it does:
-
-* First it backs up any existing `.bash_aliases` file
-* Then it creates a symbolic link from this repo to my home directory
-* After that it makes sure `.bashrc` loads `.bash_aliases`
-* Lastly it prompts the user to reload the environment
-
-- This makes the setup process much cleaner and reusable on any system.
-
+- It checks for required packages and prompts the user before installing any missing ones
+- Then backs up any existing .bash_aliases file to avoid overwriting it
+- After that it creates a symbolic link from this repo to the home directory
+- Then it also make sure .bashrc loads .bash_aliases if it’s not already set
+- Then prompts the user to reload the Bash environment after setup
 ---
 
 ## Citations
