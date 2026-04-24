@@ -1,4 +1,5 @@
-# Homefiles – Bash Customizations
+# Homefiles
+# Bash Customizations
 # Research Sharma Bhattarai
 
 
