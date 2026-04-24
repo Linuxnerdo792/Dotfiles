@@ -60,6 +60,9 @@ This folder contains my Bash customizations.
 * `extract` function for multiple archive formats
 
 # Link to my Homefiles folder:
+
+[Homefiles](https://github.com/Linuxnerdo792/Dotfiles/tree/main/homefiles)
+
 ---
 
 ### Sys-installs 
@@ -70,6 +73,10 @@ This folder contains my Bash customizations.
 * `README.md` : It explains installation steps
 
 - This part helped me understand system automation and package installation.
+
+# Link to my sys-installs folder:
+
+[sys-installs](https://github.com/Linuxnerdo792/Dotfiles/tree/main/sys-installs)
 
 ---
 
