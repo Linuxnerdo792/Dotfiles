@@ -136,15 +136,7 @@ bash homefiles/setup.sh
 
 ---
 
-## AI Usage 
 
-- In Task 2, I was flagged regarding AI usage.
-
-To fix this:
-
-* I clearly documented where AI was used
-* I rewrote explanations in my own words
-* I also made sure I fully understand the code and configurations
 
 
 
